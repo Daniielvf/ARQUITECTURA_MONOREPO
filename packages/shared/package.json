@@ -1,0 +1,11 @@
+{
+  "name": "@tienda/shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./dist/index.js",
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --format=esm --outfile=dist/index.js",
+    "test": "node --test"
+  }
+}
