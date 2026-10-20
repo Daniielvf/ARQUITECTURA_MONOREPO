@@ -1,0 +1,29 @@
+{
+  "name": "arquitectura-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "npm@11.17.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "start": "turbo run start",
+    "dev:frontend": "turbo run dev --filter=@tienda/frontend",
+    "dev:backend": "turbo run dev --filter=@tienda/backend",
+    "build:frontend": "turbo run build --filter=@tienda/frontend",
+    "build:backend": "turbo run build --filter=@tienda/backend",
+    "test:frontend": "turbo run test --filter=@tienda/frontend",
+    "test:backend": "turbo run test --filter=@tienda/backend"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0",
+    "esbuild": "^0.25.0"
+  }
+}
